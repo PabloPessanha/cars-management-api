@@ -16,3 +16,5 @@ categoriesRoute.post('/categories', (req: Request, res: Response) => {
   categories.push(newCategory);
   return res.status(201).json(newCategory);
 });
+
+export default categoriesRoute;
