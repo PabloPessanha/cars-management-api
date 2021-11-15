@@ -18,6 +18,9 @@ module.exports = {
     'class-methods-use-this': ['off'],
     'no-undef': 'off',
     'import/prefer-default-export': 'off',
+    'no-useless-constructor': 'off',
+    'no-empty-function': 'off',
+    'no-unused-vars': 'off',
     camelcase: ['off'],
   },
   settings: {
