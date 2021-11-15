@@ -1,19 +1,24 @@
 import { Router, Request, Response } from 'express';
-import { v4 as uuid } from 'uuid';
+import { CategoriesRepository } from '../repositories/CategoriesRepository';
 
 const categoriesRoute = Router();
-
-const categories = [];
+const categoriesRepository = new CategoriesRepository();
 
 categoriesRoute.get('/categories', (req: Request, res: Response) => {
-  return res.status(200).json(categories);
+  const allCategories = categoriesRepository.list();
+  return res.status(200).json(allCategories);
 });
 
 categoriesRoute.post('/categories', (req: Request, res: Response) => {
   const { name, description } = req.body;
-  const newCategory = { id: uuid(), name, description };
+  const checkCategoryExists = categoriesRepository.findByName(name);
 
-  categories.push(newCategory);
+  if (checkCategoryExists) {
+    return res.status(400).json({ error: 'Category alread registered!' });
+  }
+
+  const newCategory = categoriesRepository.create({ name, description });
+
   return res.status(201).json(newCategory);
 });
 
