@@ -17,6 +17,7 @@ module.exports = {
     'import/extensions': ['error', 'ignorePackages', { ts: 'never' }],
     'class-methods-use-this': ['off'],
     'arrow-body-style': ['error', 'always'],
+    'no-undef': 'off',
     camelcase: ['off'],
   },
   settings: {
