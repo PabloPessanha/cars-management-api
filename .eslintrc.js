@@ -18,6 +18,7 @@ module.exports = {
     'class-methods-use-this': ['off'],
     'arrow-body-style': ['error', 'always'],
     'no-undef': 'off',
+    'import/prefer-default-export': 'off',
     camelcase: ['off'],
   },
   settings: {
