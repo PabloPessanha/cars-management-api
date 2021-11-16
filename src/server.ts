@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import categories from './routes/categories.routes';
+import categories from './modules/cars/routes/categories.routes';
 
 const app = express();
 
