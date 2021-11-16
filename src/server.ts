@@ -1,11 +1,13 @@
 import express from 'express';
 import cors from 'cors';
-import categories from './modules/cars/routes/categories.routes';
+import { categoriesRouter } from './modules/cars/routes/categories.routes';
+import { specificationsRouter } from './modules/cars/routes/specifications.routes';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(categories);
+app.use('/api/categories', categoriesRouter);
+app.use('/api/specifications', specificationsRouter);
 
 app.listen(3333);
