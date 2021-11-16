@@ -1,5 +1,5 @@
 {
-  "name": "backend-typescript-template",
+  "name": "cars-management-api",
   "version": "1.0.0",
   "description": "A template for backend apis made with typescript",
   "main": "dist/server.js",
