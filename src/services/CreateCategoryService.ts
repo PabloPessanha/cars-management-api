@@ -5,7 +5,7 @@ class CreateCategoryService {
     const checkCategoryExists = this.categoriesRepository.findByName(name);
 
     if (checkCategoryExists) {
-      throw new Error('Category alread registered!');
+      throw new Error('Category already registered!');
     }
 
     const newCategory = this.categoriesRepository.create({ name, description });
