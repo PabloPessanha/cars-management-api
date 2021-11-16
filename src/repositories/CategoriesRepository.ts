@@ -1,18 +1,13 @@
 import { v4 as uuidV4 } from 'uuid';
 
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
-
-class CategoriesRepository {
+class CategoriesRepository implements Categories.Repository {
   private categories: Category[];
 
   constructor() {
     this.categories = [];
   }
 
-  create({ name, description }: ICreateCategoryDTO) {
+  create({ name, description }: Categories.Create) {
     const category: Category = {
       id: uuidV4(),
       name,

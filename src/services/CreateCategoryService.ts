@@ -1,14 +1,7 @@
-import { CategoriesRepository } from '../repositories/CategoriesRepository';
-
-interface IRequest {
-  name: string;
-  description: string;
-}
-
 class CreateCategoryService {
-  constructor(private categoriesRepository: CategoriesRepository) {}
+  constructor(private categoriesRepository: Categories.Repository) {}
 
-  execute({ name, description }: IRequest) {
+  execute({ name, description }: Categories.Create) {
     const checkCategoryExists = this.categoriesRepository.findByName(name);
 
     if (checkCategoryExists) {
