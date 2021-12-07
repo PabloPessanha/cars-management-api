@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { categoriesRouter } from './modules/cars/routes/categories.routes';
-import { specificationsRouter } from './modules/cars/routes/specifications.routes';
+import { categoriesRouter } from './routes/categories.routes';
+import { specificationsRouter } from './routes/specifications.routes';
 
 const app = express();
 
