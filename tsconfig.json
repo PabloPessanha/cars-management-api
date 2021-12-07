@@ -7,10 +7,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "@modules": ["src/modules/*"],
-      "@serviceCars": ["src/modules/cars/services"],
-    }
   }
 }
