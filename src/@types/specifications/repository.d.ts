@@ -1,7 +1,8 @@
-declare namespace Specifications {
+declare namespace ISpecifications {
+  type Specification = import('../../modules/cars/model/Specification');
   interface Repository {
     findByName(name: string): boolean;
     list(): Category[];
-    create({ name, description }: Specifications.Create): Specification;
+    create({ name, description }: ISpecifications.Create): Specification;
   }
 }

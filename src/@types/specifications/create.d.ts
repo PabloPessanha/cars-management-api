@@ -1,4 +1,4 @@
-declare namespace Specifications {
+declare namespace ISpecifications {
   interface Create {
     name: string;
     description: string;
