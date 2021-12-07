@@ -1,3 +1,5 @@
+import { Category } from '../../modules/cars/model/Category';
+
 declare namespace ICategories {
   interface Repository {
     findByName(name: string): boolean;
