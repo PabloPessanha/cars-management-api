@@ -1,7 +1,7 @@
 class CreateCategoryService {
-  constructor(private categoriesRepository: Categories.Repository) {}
+  constructor(private categoriesRepository: ICategories.Repository) {}
 
-  execute({ name, description }: Categories.Create) {
+  execute({ name, description }: ICategories.Create) {
     const checkCategoryExists = this.categoriesRepository.findByName(name);
 
     if (checkCategoryExists) {

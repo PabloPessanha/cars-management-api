@@ -1,4 +1,4 @@
-declare namespace Categories {
+declare namespace ICategories {
   interface Repository {
     findByName(name: string): boolean;
     list(): Category[];

@@ -1,19 +1,18 @@
-import { v4 as uuidV4 } from 'uuid';
+import { Category } from '../model/Category';
 
-class CategoriesRepository implements Categories.Repository {
+class CategoriesRepository implements ICategories.Repository {
   private categories: Category[];
 
   constructor() {
     this.categories = [];
   }
 
-  create({ name, description }: Categories.Create) {
-    const category: Category = {
-      id: uuidV4(),
-      name,
-      description,
-      created_at: new Date(),
-    };
+  create({ name, description }: ICategories.Create) {
+    const category = new Category();
+    category.name = name;
+    category.description = description;
+    category.created_at = new Date();
+
     this.categories.push(category);
 
     return category;
