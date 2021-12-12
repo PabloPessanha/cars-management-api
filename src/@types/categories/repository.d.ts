@@ -1,5 +1,5 @@
 declare namespace ICategories {
-  type Category = import('../../modules/cars/model/Category');
+  type Category = import('../../modules/cars/model/Category').Category;
   interface Repository {
     findByName(name: string): boolean;
     list(): Category[];
