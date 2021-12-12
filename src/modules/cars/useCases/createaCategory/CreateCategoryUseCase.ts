@@ -1,4 +1,4 @@
-class CreateCategoryService {
+class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategories.Repository) {}
 
   execute({ name, description }: ICategories.Create) {
@@ -13,4 +13,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService };
+export { CreateCategoryUseCase };
