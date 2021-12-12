@@ -22,7 +22,7 @@ class CategoriesRepository implements ICategories.Repository {
     return this.categories;
   }
 
-  findByName(name) {
+  findByName(name: string) {
     return this.categories.some((category) => category.name === name);
   }
 }
