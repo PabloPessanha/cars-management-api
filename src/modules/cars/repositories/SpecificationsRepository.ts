@@ -3,8 +3,17 @@ import { Specification } from '../model/Specification';
 class SpecificationsRepository implements ISpecifications.Repository {
   private specifications: Specification[];
 
+  private static INSTACE: ISpecifications.Repository;
+
   constructor() {
     this.specifications = [];
+  }
+
+  public static getInstance() {
+    if (!SpecificationsRepository.INSTACE) {
+      SpecificationsRepository.INSTACE = new SpecificationsRepository();
+    }
+    return this.INSTACE;
   }
 
   create({ name, description }: ISpecifications.Create) {
